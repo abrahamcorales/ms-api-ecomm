@@ -1,0 +1,121 @@
+[
+  {
+    "title": "alexa",
+    "price": 300000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "large size",
+    "codigo": "sksifk3304",
+    "id": 1,
+    "timestamp": "13/11/2021 20:25:10"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 2,
+    "timestamp": "14/11/2021 12:42:27"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 3,
+    "timestamp": "14/11/2021 12:50:19"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 4,
+    "timestamp": "15/11/2021 21:22:20"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 5,
+    "timestamp": "15/11/2021 21:23:36"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 6,
+    "timestamp": "15/11/2021 21:24:19"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 7,
+    "timestamp": "15/11/2021 21:24:36"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 8,
+    "timestamp": "15/11/2021 21:25:09"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 9,
+    "timestamp": "15/11/2021 21:25:28"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 10,
+    "timestamp": "15/11/2021 21:28:22"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 11,
+    "timestamp": "15/11/2021 21:28:30"
+  },
+  {
+    "title": "tv",
+    "price": 10000,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 12,
+    "timestamp": "15/11/2021 21:34:37"
+  }
+]

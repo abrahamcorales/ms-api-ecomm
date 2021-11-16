@@ -1,0 +1,173 @@
+[
+  {
+    "timestamp": "14/11/2021 12:26:16",
+    "id": 1,
+    "productos": []
+  },
+  {
+    "timestamp": "14/11/2021 12:26:16",
+    "id": 2,
+    "productos": [
+      {
+        "title": "pc",
+        "price": 100000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "mac",
+        "codigo": "sksifk3304",
+        "id": 1,
+        "timestamp": "13/11/2021 20:25:10"
+      },
+      {
+        "title": "hometheater",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 2,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "taza",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 4,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "termo",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 5,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "cepillo",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 6,
+        "timestamp": "14/11/2021 12:42:27"
+      }
+    ]
+  },
+  {
+    "timestamp": "14/11/2021 14:08:41",
+    "id": 3,
+    "productos": [
+      {
+        "title": "pc",
+        "price": 100000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "mac",
+        "codigo": "sksifk3304",
+        "id": 1,
+        "timestamp": "13/11/2021 20:25:10"
+      },
+      {
+        "title": "hometheater",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 2,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "telcado",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 3,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "taza",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 4,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "termo",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 5,
+        "timestamp": "14/11/2021 12:42:27"
+      },
+      {
+        "title": "cepillo",
+        "price": 20000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 6,
+        "timestamp": "14/11/2021 12:42:27"
+      }
+    ]
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:25",
+    "id": 4
+  },
+  {
+    "productos": [
+      {
+        "title": "tv",
+        "price": 10000,
+        "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+        "descripcion": "lg 4k",
+        "codigo": "sksifk3304",
+        "stock": 20,
+        "id": 2,
+        "timestamp": "14/11/2021 12:42:27"
+      }
+    ],
+    "timestamp": "14/11/2021 20:29:25",
+    "id": 5
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:26",
+    "id": 6
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:26",
+    "id": 7
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:26",
+    "id": 8
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:26",
+    "id": 9
+  },
+  {
+    "productos": [],
+    "timestamp": "14/11/2021 20:29:26",
+    "id": 10
+  }
+]
