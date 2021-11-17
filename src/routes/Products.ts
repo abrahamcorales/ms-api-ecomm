@@ -3,12 +3,9 @@ import ProductsClass from '../helpers/ProductsClass'
 const routes = express.Router()
 import { Products } from '../interfaces/Inventory';
 import { Auth } from '../middleware/Auth'
-
 import path from 'path';
 const filePath = path.join(__dirname,'..', '..', 'data', 'products.txt');
-
 const HandlerStock = new ProductsClass(filePath)
-
 
 routes.get('/',async(req,res)=>{
     
@@ -52,10 +49,11 @@ routes.delete('/:id',Auth,async(req,res) =>{
     
     let id:number = parseInt(req.params.id)
     let result = await HandlerStock.deleteById(id)
+    
     result && 
         res.send({'status':'deleted'})
         ||
-        res.send({'status':"error"})
+        res.status(400).send({'status':"error"})
 
 })
 
