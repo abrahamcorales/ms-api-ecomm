@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
     "dev" : "concurrently -k \"tsc -p ./ -w\" \"nodemon ./dist/server.js\""
   },
   "author": "abraham",

@@ -7,44 +7,5 @@
     "codigo": "sksifk3304",
     "id": 1,
     "timestamp": "13/11/2021 20:25:10"
-  },
-  {
-    "title": "play 5",
-    "price": 10000,
-    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "lg 4k",
-    "codigo": "sksifk3304",
-    "stock": 20,
-    "id": 2,
-    "timestamp": "15/11/2021 23:28:41"
-  },
-  {
-    "title": "tv",
-    "price": 10000,
-    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "lg 4k",
-    "codigo": "sksifk3304",
-    "stock": 20,
-    "id": 3,
-    "timestamp": "15/11/2021 23:29:06"
-  },
-  {
-    "title": "tv",
-    "price": 10000,
-    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "lg 4k",
-    "codigo": "sksifk3304",
-    "stock": 20,
-    "id": 4,
-    "timestamp": "15/11/2021 23:29:07"
-  },
-  {
-    "title": "tablet",
-    "price": 10000,
-    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "lg 4k",
-    "codigo": "sksifk3304",
-    "stock": 20,
-    "id": 5
   }
 ]
