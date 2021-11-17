@@ -12,9 +12,9 @@ class CartsClass extends ProductsClass {
 
     async getProductsCart(id:number){
             
-            const cart:Carts[] =  await this.FuncJSONparse(this.file)
-            let cartId = cart.find(cart => cart.id === id )
-            return cartId?.productos;
+        const cart:Carts[] =  await this.FuncJSONparse(this.file)
+        let cartId = cart.find(cart => cart.id === id )
+        return cartId?.productos;
                 
     }
 

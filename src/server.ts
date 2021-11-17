@@ -10,13 +10,13 @@ app.use('/api/productos',RouteProduct)
 app.use('/api/carrito',RouteCarts)
 
 app.use((req, res) => {
-          res.send({
-            error: {
-              'error':'-2',
-              'descripcion':`ruta ${req.originalUrl}  y método ${req.method} no implementado`,
-            },
-          });
+    res.send({
+      error: {
+        'error':'-2',
+        'descripcion':`ruta ${req.originalUrl}  y método ${req.method} no implementado`,
+      },
     });
+});
 
 app.listen(port,()=>{
     console.log('server running 2');

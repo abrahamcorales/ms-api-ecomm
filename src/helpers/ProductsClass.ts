@@ -73,12 +73,12 @@ class ProductsClass {
 
     async editById(number:number,product:Products){
    
-            const result = await readFile(this.file,{encoding:'utf8'})
-            const products:Products[] = JSON.parse(result)
-            const index = products.findIndex(p => p.id === number)
-            product.id = number           
-            products[index] = product
-            return await this.SavetoFile(this.file,products)
+        const result = await readFile(this.file,{encoding:'utf8'})
+        const products:Products[] = JSON.parse(result)
+        const index = products.findIndex(p => p.id === number)
+        product.id = number           
+        products[index] = product
+        return await this.SavetoFile(this.file,products)
     }
 
 }
