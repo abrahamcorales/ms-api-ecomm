@@ -44,7 +44,7 @@ routes.post('/:id/productos',async(req,res)=>{
     let productId:number = req.body.id
     if (productId) {
         let result = await HandlerStock.addProductsCart(cartId,productId)
-        result ? res.send(result) : res.status(400).send({'status':'error'})
+        result ? res.send({ 'status': 'added' }) : res.status(400).send({'status':'error'})
          
     }else{
         res.send({'status':'error, neceistas enviar la key \'id\' con el numbero del producto en el body'})
@@ -57,7 +57,9 @@ routes.delete('/:id/producto/:id_prod',async(req,res)=>{
     let idProduct:number = parseInt(req.params.id_prod)
     const result = await HandlerStock.deleteProductCart(id,idProduct)
     
-    res.send(result)
+    result && res.send({ 'status': 'deleted' })
+    ||
+    res.status(400).send({'status':'error'})
 
 })
 export default routes

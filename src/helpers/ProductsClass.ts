@@ -8,78 +8,75 @@ class ProductsClass {
 
     constructor(file:string) {  
         this.file = file
-    
     }
-    protected async FuncJSONparse(file:string):Promise<Carts[] & Products[]> {
+
+    protected async FuncJSONparse(file:string):Promise<any> {
         try {
         
          let result = await fs.readFile(file, { encoding: 'utf8' });
          return JSON.parse(result);
         
         } catch (error) {
-            throw new Error("error en leer el archivo ")
+            console.log(error);
+            return true
         }
     }
     
-    public async getAll() {
-        return this.FuncJSONparse(this.file)
-      }
-      
-    async getById(number:number){
+    protected async SavetoFile(file:string,result:object):Promise<boolean>{
+        
         try {
-                const products:Products[] = await this.FuncJSONparse(this.file)
-                /* find product's id */
-                let getPproduct = products.find(p => p.id === number );
-                return getPproduct
+            await fs.writeFile(file,JSON.stringify(result,null,2),{encoding:'utf8'})
+            return true
+       } 
+       catch (error) {
+            console.log(error);
+            return false }
+        }
 
-        } catch (error) {throw error }
+    async getAll() {
+            return this.FuncJSONparse(this.file)
+          }  
+
+    async getById(number:number){
+
+        const products:Products[] = await this.FuncJSONparse(this.file)
+        /* find product's id */
+        let getPproduct = products.find(p => p.id === number );
+        return getPproduct
+
     }
 
     async save(obj:any = {}):Promise<any[]>{
         let date = new Date().toLocaleString('es-US',{timeZone:timezone,hour12:false})
-        //? add timestamp
-        obj.timestamp = date
-        //? get list from txt file 
-        let getList = await this.FuncJSONparse(this.file)
-        //? agregar obj al array 
-        getList.push(obj)
+         obj.timestamp = date 
         
-        //? obtener el ultimo objeto del array 
-        let LastObj = getList[ getList.length - 2 ]
+        let list = await this.FuncJSONparse(this.file)
+        list.push(obj) //? agregar obj al array 
+        let LastObj = list[ list.length - 2 ] //? obtener el ultimo objeto del array
+        
         //? si el ultimo objeto existe sumale 1 al id de ese objeto sino asigna al obj el id 1
         LastObj ? obj.id = (LastObj.id || 0 ) + 1 : obj.id = 1;
-
-        try {
-             await fs.writeFile(this.file,JSON.stringify(getList,null,2),{encoding:'utf8'})
-             return [true,obj]
-        } 
-        catch (error) {
-            return [false,{}] }
+        
+        let save = await this.SavetoFile(this.file,list)
+        return save ? [true,obj] :  [false,{}] 
     }
 
     async deleteById(number:number){
-        try {
-                const result = await fs.readFile(this.file,{encoding:'utf8'})
-                const products:Products[] = JSON.parse(result)
-                /* find product's id */
-                const listFiltered = products.filter(p => p.id !== number );
-                await fs.writeFile(this.file,JSON.stringify(listFiltered,null,2),{encoding:'utf8'})
-                return true 
-        } catch (error) {throw error }
+
+        let list:Products[] = await this.FuncJSONparse(this.file)
+        const listFiltered = list.filter(p => p.id !== number);
+        return  await this.SavetoFile(this.file,listFiltered)
+        
     }
 
     async editById(number:number,product:Products){
-        try {
+   
             const result = await fs.readFile(this.file,{encoding:'utf8'})
             const products:Products[] = JSON.parse(result)
             const index = products.findIndex(p => p.id === number)
-            product.id = number
+            product.id = number           
             products[index] = product
-            await fs.writeFile(this.file,JSON.stringify(products,null,2),{encoding:'utf8'})
-            return true
-        } catch (error) {
-            
-        }
+            return await this.SavetoFile(this.file,products)
     }
 
 }

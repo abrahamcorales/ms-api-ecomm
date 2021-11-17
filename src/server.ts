@@ -13,7 +13,7 @@ app.use((req, res) => {
           res.send({
             error: {
               'error':'-2',
-              'descripcion':`ruta ${req.originalUrl} método ${req.method} no implementada`,
+              'descripcion':`ruta ${req.originalUrl}  y método ${req.method} no implementado`,
             },
           });
     });
