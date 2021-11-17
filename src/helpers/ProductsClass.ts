@@ -1,4 +1,6 @@
-import fs from 'fs/promises'
+
+import { promises } from "fs";
+const { readFile, writeFile } = promises;
 import { Products, Carts } from '../interfaces/Inventory';
 const timezone = "America/Argentina/Buenos_Aires"
 
@@ -13,7 +15,7 @@ class ProductsClass {
     protected async FuncJSONparse(file:string):Promise<any> {
         try {
         
-         let result = await fs.readFile(file, { encoding: 'utf8' });
+         let result = await readFile(file, { encoding: 'utf8' });
          return JSON.parse(result);
         
         } catch (error) {
@@ -25,7 +27,7 @@ class ProductsClass {
     protected async SavetoFile(file:string,result:object):Promise<boolean>{
         
         try {
-            await fs.writeFile(file,JSON.stringify(result,null,2),{encoding:'utf8'})
+            await writeFile(file,JSON.stringify(result,null,2),{encoding:'utf8'})
             return true
        } 
        catch (error) {
@@ -71,7 +73,7 @@ class ProductsClass {
 
     async editById(number:number,product:Products){
    
-            const result = await fs.readFile(this.file,{encoding:'utf8'})
+            const result = await readFile(this.file,{encoding:'utf8'})
             const products:Products[] = JSON.parse(result)
             const index = products.findIndex(p => p.id === number)
             product.id = number           

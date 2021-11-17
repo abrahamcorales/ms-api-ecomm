@@ -3,7 +3,6 @@ const routes = express.Router()
 import { Carts, Products } from '../interfaces/Inventory';
 import CartsClass from '../helpers/CartsClass';
 import path from 'path';
-import { Auth } from '../middleware/Auth'
 const filePath = path.join(__dirname,'..', '..', 'data', 'carts.txt');
 
 const HandlerStock = new CartsClass(filePath)
