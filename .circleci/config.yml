@@ -23,14 +23,14 @@ workflows:
           tag: <<pipeline.parameters.image-tag>>
           dockerfile: Dockerfile
           context:
-            - abrahamcorales-prod
+            - prod
           filters:
             branches:
               only: 
               - main
       - update-task:
           context:
-            - abrahamcorales-prod
+            - prod
           filters:
             branches:
               only: 
@@ -47,7 +47,7 @@ workflows:
           requires:
             - update-task
           context:
-            - abrahamcorales-prod
+            - prod
           filters:
             branches:
               only: 
