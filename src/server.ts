@@ -10,7 +10,7 @@ app.use('/api/productos',RouteProduct)
 app.use('/api/carrito',RouteCarts)
 
 app.get('/api/version',(req,res)=>{
-  res.send({'v':'1.0.1'})
+  res.send({'v':'1.0.2'})
 })
 
 app.use((req, res) => {
