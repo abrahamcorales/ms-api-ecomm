@@ -9,6 +9,10 @@ app.use(express.json());
 app.use('/api/productos',RouteProduct)
 app.use('/api/carrito',RouteCarts)
 
+app.get('/api/version',(req,res)=>{
+  res.send({'v':'1.0.0'})
+})
+
 app.use((req, res) => {
     res.send({
       error: {
