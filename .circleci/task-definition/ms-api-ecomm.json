@@ -4,8 +4,8 @@
             "name": "ms-api-ecomm",
             "image": "780183661990.dkr.ecr.us-east-1.amazonaws.com/ms-api-ecomm",
             "cpu": 128,
-            "memory": 200,
-            "memoryReservation": 100,
+            "memory": 100,
+            "memoryReservation": 70,
             "portMappings": [
                 {
                     "containerPort": 8080,
