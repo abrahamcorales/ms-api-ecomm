@@ -23,6 +23,6 @@ app.use((req, res) => {
 });
 
 app.listen(port,()=>{
-    console.log('server running 2');
+    console.log('server running');
     
 })
