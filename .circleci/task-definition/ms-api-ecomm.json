@@ -14,7 +14,7 @@
                 }
             ],
             "dockerLabels": {
-                "traefik.frontend.rule": "Path:/api",
+                "traefik.frontend.rule": "PathPrefix:/api",
                 "traefik.enable": "true",
                 "traefik.backend": "ms-api-comm",
                 "traefik.protocol": "http"
