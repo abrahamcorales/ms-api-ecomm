@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "ms-api-ecomm",
-            "image": "842167084576.dkr.ecr.us-east-1.amazonaws.com/dnsmasq",
+            "image": "780183661990.dkr.ecr.us-east-1.amazonaws.com/ms-api-ecomm",
             "cpu": 0,
             "memory": 50,
             "portMappings": [
