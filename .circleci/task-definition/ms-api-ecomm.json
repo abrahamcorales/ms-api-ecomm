@@ -3,9 +3,8 @@
         {
             "name": "ms-api-ecomm",
             "image": "842167084576.dkr.ecr.us-east-1.amazonaws.com/dnsmasq",
-            "cpu": 512,
-            "memory": 512,
-            "memoryReservation": 256,
+            "cpu": 0,
+            "memory": 50,
             "portMappings": [
                 {
                     "containerPort": 8080,

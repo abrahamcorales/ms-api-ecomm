@@ -40,22 +40,22 @@ workflows:
               - main
           requires:
             - aws-ecr/build-and-push-image   
-#      - aws-ecs/deploy-service-update:
-#          aws-access-key-id: AWS_ACCESS_KEY_ID
-#          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-#          cluster-name: <<pipeline.parameters.cluster-name>>
-#          container-image-name-updates: 'container=${CIRCLE_PROJECT_REPONAME},tag=<<pipeline.parameters.image-tag>>'
-#          family: '${CIRCLE_PROJECT_REPONAME}'
-#          service-name: '$CIRCLE_PROJECT_REPONAME'
-#          requires:
-#            - update-task
-#          context:
-#            - prod
-#          filters:
-#            branches:
-#              only: 
-#              - main
-#
+      - aws-ecs/deploy-service-update:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          cluster-name: <<pipeline.parameters.cluster-name>>
+          container-image-name-updates: 'container=${CIRCLE_PROJECT_REPONAME},tag=<<pipeline.parameters.image-tag>>'
+          family: '${CIRCLE_PROJECT_REPONAME}'
+          service-name: '$CIRCLE_PROJECT_REPONAME'
+          requires:
+            - update-task
+          context:
+            - prod
+          filters:
+            branches:
+              only: 
+              - main
+
 jobs:
   update-task:
     docker:
