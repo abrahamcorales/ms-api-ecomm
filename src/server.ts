@@ -3,7 +3,8 @@ const app = express()
 const port = process.env.PORT || 8080;
 import RouteProduct from './routes/Products'
 import RouteCarts from './routes/Carts'
-
+import morgan from 'morgan'
+app.use(morgan('combined'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/api/productos',RouteProduct)
