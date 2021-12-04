@@ -3,6 +3,9 @@ parameters:
   image-tag:
     type: string
     default: $(echo $CIRCLE_SHA1 | cut -c -7)
+  cluster-name:
+    type: string
+    default: ecs-platform
 
 orbs:
   aws-ecr: circleci/aws-ecr@6.15
@@ -40,7 +43,7 @@ workflows:
       - aws-ecs/deploy-service-update:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          cluster-name: "ecs-platform"
+          cluster-name: <<pipeline.parameters.cluster-name>>
           container-image-name-updates: 'container=${CIRCLE_PROJECT_REPONAME},tag=<<pipeline.parameters.image-tag>>'
           family: '${CIRCLE_PROJECT_REPONAME}'
           service-name: '$CIRCLE_PROJECT_REPONAME'
