@@ -40,7 +40,7 @@ workflows:
       - aws-ecs/deploy-service-update:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          cluster-name: CLUSTER_ECS
+          cluster-name: "ecs-platform"
           container-image-name-updates: 'container=${CIRCLE_PROJECT_REPONAME},tag=<<pipeline.parameters.image-tag>>'
           family: '${CIRCLE_PROJECT_REPONAME}'
           service-name: '$CIRCLE_PROJECT_REPONAME'
