@@ -13,6 +13,12 @@
                     "protocol": "tcp"
                 }
             ],
+            "dockerLabels": {
+                "traefik.frontend.rule": "Path:/api",
+                "traefik.enable": "true",
+                "traefik.backend": "ms-api-comm",
+                "traefik.protocol": "http"
+            },
             "essential": true,
             "environment": [],
             "mountPoints": [],
