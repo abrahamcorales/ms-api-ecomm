@@ -11,11 +11,15 @@
   "author": "abraham",
   "license": "ISC",
   "dependencies": {
+    "@types/json-schema": "^7.0.9",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^6.0.14",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.11.7",
     "concurrently": "^6.3.0",

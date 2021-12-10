@@ -10,8 +10,9 @@ export interface Products {
   timestamp?: string
   }
 
-  export interface Carts {
-    id?: number
-    timestamp?: string
-    productos?: Products[]
-    }
+export interface Carts {
+  id?: number
+  timestamps?: any
+  productos?: Products[]
+  create_date?:any
+  }

@@ -26,5 +26,6 @@
           }
         ],
         "family": "ms-api-ecomm",
-        "cpu": "128"
+        "cpu": "128",
+        "memory": "100"
     }

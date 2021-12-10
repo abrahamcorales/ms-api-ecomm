@@ -1,5 +1,5 @@
 import * as express from 'express';
-import ProductsClass from '../helpers/ProductsClass'
+import ProductsClass from '../containers/ProductsFS'
 const routes = express.Router()
 import { Products } from '../interfaces/Inventory';
 import { Auth } from '../middleware/Auth'
@@ -12,7 +12,7 @@ routes.get('/',async(req,res)=>{
     let result = await HandlerStock.getAll()    
     result && res.send(result) 
     ||
-    res.status(400).send({ 'status': 'error' });
+    res.status(400).send({ 'statuss': 'error' });
 
 })
 

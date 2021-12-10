@@ -1,6 +1,8 @@
-import ProductsClass from './ProductsClass';
+import ProductsClass from './ProductsFS';
 import { Carts, Products } from '../interfaces/Inventory';
+
 import path from 'path';
+
 const ProductFile = path.join(__dirname,'..', '..', 'data', 'products.txt');
 
 
