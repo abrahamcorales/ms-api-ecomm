@@ -1,11 +1,18 @@
 import ContainerMongo from '../containers/ContainerMongo';
+import {CartsDao} from '../dao/index';
 
-const db = new ContainerMongo
+const db = new CartsDao
+
+//const db = new ContainerMongo('cart',{
+//    productos: { type: [], required: true },
+//    create_date: { type: Date, default: Date.now }
+//    })
 
 
 export const save = async (req:any,res:any) => {
 
         try {
+
             await db.save()
             res.send(({ 'status': 'added' }))
         } catch (error) {
@@ -23,7 +30,7 @@ export const  getProductsCart = async(req:any,res:any) => {
         res.status(400).send({'status':'error'})
     }          
 }
-
+//
 export const addProductsCart = async (req:any,res:any)=>{
     let cartId:string = req.params.id
     let productId:number = req.body.id
@@ -35,3 +42,4 @@ export const addProductsCart = async (req:any,res:any)=>{
         res.send({'status':'error, neceistas enviar la key \'id\' con el numbero del producto en el body'})
     }  
 }
+//

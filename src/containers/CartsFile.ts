@@ -1,4 +1,4 @@
-import ProductsClass from './ProductsFS';
+import ProductsClass from './ProductsFile';
 import { Carts, Products } from '../interfaces/Inventory';
 
 import path from 'path';

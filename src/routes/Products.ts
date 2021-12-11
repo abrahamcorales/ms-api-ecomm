@@ -1,5 +1,5 @@
 import * as express from 'express';
-import ProductsClass from '../containers/ProductsFS'
+import ProductsClass from '../containers/ProductsFile'
 const routes = express.Router()
 import { Products } from '../interfaces/Inventory';
 import { Auth } from '../middleware/Auth'
