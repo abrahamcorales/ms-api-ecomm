@@ -25,6 +25,7 @@ export const  getProductsCart = async(req:any,res:any) => {
 export const addProductsCart = async (req:any,res:any)=>{
     let cartId:string = req.params.id
     let productId:string = req.body.id
+    
     if (productId) {
         let result = await db.addProductsCart(cartId,productId)
         console.log(result);

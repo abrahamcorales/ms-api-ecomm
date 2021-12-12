@@ -3,7 +3,8 @@ import CartsDaoMongo from  './carts/CartsDaoMongo'
 import CartsDaoFile from './carts/CartsDaoFile';
 import ProductsDaoMongo from './products/ProductsDaoMongo';
 import ProductsDaoFile from './products/ProductsDaoFile';
-
+import ProductsDaoFirebase from './products/ProductsDaoFirebase';
+import CartsDaoFirebase from './carts/CartsDaoFirebase';
 
 dotenv.config()
     
@@ -19,9 +20,13 @@ switch (process.env.DB_PERS) {
     case 'file':
         CartsDao    = CartsDaoFile
         ProductsDao = ProductsDaoFile
+    
+    case 'firebase':
+        CartsDao    = CartsDaoFirebase
+        ProductsDao = ProductsDaoFirebase
+    
     default:
         break;
 }
-
 
 export {  CartsDao,ProductsDao }
