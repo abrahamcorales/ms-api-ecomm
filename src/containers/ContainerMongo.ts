@@ -4,7 +4,6 @@ import config from '../config'
 import * as dotenv from 'dotenv';
 dotenv.config()
 
-
 mongoose.connect(config.mongodb.string,
                 {dbName:config.mongodb.db})
                 .then(() => console.log('conexion exitosa'))
@@ -42,9 +41,13 @@ class ContainerMongo {
     }
 //
     async addProductsCart(cartId:string,productoId:string):Promise<boolean | object | null >{ 
-        let producto:Object = {} //= hacerunfind.productoId
+        let ObjectId = mongoose.Types.ObjectId
+        let dbExt = mongoose.connection
+        let test = dbExt.collection('productos')
+        let Producto = await test.findOne({'_id':new ObjectId(productoId)}) 
+
         try {
-            await this.collection.updateOne({_id: cartId}, {$push: {productos: producto }})            
+            await this.collection.updateOne({_id: cartId}, {$push: {productos: Producto }})            
             return true
         } catch (error) {
             return false
@@ -54,7 +57,7 @@ class ContainerMongo {
 
         try {
             let cart = await  this.collection.findById(cartId)
-            let filterProduct = cart?.productos?.filter(producto => producto.id !== 1)
+            let filterProduct = cart?.productos?.filter(producto => producto.id !== productId)
             this.collection.updateOne({_id: cartId},{productos:filterProduct})           
             return true
         } catch (error) {
@@ -64,10 +67,10 @@ class ContainerMongo {
         }
 
     }
-    async deleteById(cartId:string){
+    async deleteById(id:string){
 
         try {
-            await this.collection.deleteOne({_id: cartId})       
+            await this.collection.deleteOne({_id: id})       
             return true
         } catch (error) {
             console.log(error);
@@ -84,12 +87,16 @@ class ContainerMongo {
         return await this.collection.findById(id)
       } 
 
-    async editById(id:string,producto:string) {
+    async editById(id:string,producto:object) {
+        
+        try{
+             await this.collection.replaceOne({_id: id},producto)
+            return true
+        } catch (error) {
+            console.log(error);
 
-     let result = await this.collection.replaceOne({_id: id},producto)
-     console.log(result);
-      
-     return await this.collection.findById(id)
+            return false
+        }
     } 
 }
 
