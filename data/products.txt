@@ -9,7 +9,7 @@
     "id": 1
   },
   {
-    "title": "cabezadetermo",
+    "title": "lapiz",
     "price": 22222,
     "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
     "descripcion": "lg 4k",
