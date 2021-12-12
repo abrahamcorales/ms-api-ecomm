@@ -39,11 +39,11 @@ class ProductsClass {
             return this.FuncJSONparse(this.file)
           }  
 
-    async getById(number:number){
-
+    async getById(number:string){
+        let id = parseInt(number)
         const products:Products[] = await this.FuncJSONparse(this.file)
         /* find product's id */
-        let getPproduct = products.find(p => p.id === number );
+        let getPproduct = products.find(p => p.id === id );
         return getPproduct
 
     }
@@ -71,13 +71,17 @@ class ProductsClass {
         
     }
 
-    async editById(number:number,product:Products){
-   
+    async editById(number:string,product:Products){
+        let id = parseInt(number)
+        console.log(id);
+        
         const result = await readFile(this.file,{encoding:'utf8'})
         const products:Products[] = JSON.parse(result)
-        const index = products.findIndex(p => p.id === number)
-        product.id = number           
+                
+        const index = products.findIndex(p => p.id === id)
+        product.id = id           
         products[index] = product
+        
         return await this.SavetoFile(this.file,products)
     }
 

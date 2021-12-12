@@ -1,6 +1,7 @@
 import containerFile from '../../containers/CartsFile';
+import config from '../../config'
 import path from 'path';
-const filePath = path.join(__dirname,'..','..', '..', 'data', 'carts.txt');
+const filePath = path.join(__dirname,'..','..', '..', config.file.path, 'carts.txt');
 
 class CartsDaoFile extends containerFile {
 

@@ -1,11 +1,20 @@
 [
   {
-    "title": "alexa",
-    "price": 300000,
+    "title": "tablet",
+    "price": 22222,
     "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "large size",
+    "descripcion": "lg 4k",
     "codigo": "sksifk3304",
-    "id": 1,
-    "timestamp": "13/11/2021 20:25:10"
+    "stock": 20,
+    "id": 1
+  },
+  {
+    "title": "cabezadetermo",
+    "price": 22222,
+    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
+    "descripcion": "lg 4k",
+    "codigo": "sksifk3304",
+    "stock": 20,
+    "id": 2
   }
 ]
