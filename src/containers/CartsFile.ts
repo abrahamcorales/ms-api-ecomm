@@ -4,8 +4,6 @@ import { Carts, Products } from '../interfaces/Inventory';
 import path from 'path';
 
 const ProductFile = path.join(__dirname,'..', '..', 'data', 'products.txt');
-
-
 class CartsClass extends ProductsClass {
     
     constructor(file:string) {  
