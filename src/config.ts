@@ -10,7 +10,7 @@ export default {
         path: './data'
     },
     firebase: {
-        credetentialFile: './ms-api-ecomm-firebase-adminsdk-nfog5-74f7436716.json',
+        credetentialFile: './admin-fire.json',
         databaseURL: 'ms-api-ecomm.firebaseio.com'
     }
 }
