@@ -1,12 +1,13 @@
 import * as express from 'express';
 import * as prController  from '../controllers/Productos'
+import { Auth } from '../middleware/Auth'
 const routes = express.Router()
 
-routes.post('/',prController.save)
+routes.post('/',Auth,prController.save)
 routes.get('/',prController.getAll)
 routes.get('/:id',prController.getById)
-routes.delete('/:id',prController.deleteById)
-routes.put('/:id',prController.editById)
+routes.delete('/:id',Auth,prController.deleteById)
+routes.put('/:id',Auth,prController.editById)
 
 export default routes
 
