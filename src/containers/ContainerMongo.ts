@@ -3,16 +3,7 @@ import mongoose from 'mongoose'
 import config from '../config'
 import * as dotenv from 'dotenv';
 dotenv.config()
-const productofake = {
 
-    "title": "alexa1",
-    "price": 4444,
-    "thumbnail": "https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg",
-    "descripcion": "large size",
-    "codigo": "sksifk3304",
-    "id": 1,
-    "timestamp": "13/11/2021 20:25:10"
-}
 
 mongoose.connect(config.mongodb.string,
                 {dbName:config.mongodb.db})
@@ -40,24 +31,66 @@ class ContainerMongo {
  
     }
     
-    async getProductsCart(id:string):Promise<boolean | object | null >{
+    async getProductsCart(cartId:string):Promise<boolean | object | null >{
  
         try {
-            let result = await this.collection.findById(id).select('productos')
+            let result = await this.collection.findById(cartId).select('productos')
             return result
         } catch (error) {
             return true
         }
     }
 //
-    async addProductsCart(id:string,producto:number):Promise<boolean | object | null >{ 
+    async addProductsCart(cartId:string,productoId:string):Promise<boolean | object | null >{ 
+        let producto:Object = {} //= hacerunfind.productoId
         try {
-            await this.collection.updateOne({_id: id}, {$push: {productos: productofake }})
+            await this.collection.updateOne({_id: cartId}, {$push: {productos: producto }})            
             return true
         } catch (error) {
             return false
         }
     }
+    async deleteProductCart(cartId:string,productId:string){
+
+        try {
+            let cart = await  this.collection.findById(cartId)
+            let filterProduct = cart?.productos?.filter(producto => producto.id !== 1)
+            this.collection.updateOne({_id: cartId},{productos:filterProduct})           
+            return true
+        } catch (error) {
+            console.log(error);
+            
+            return false
+        }
+
+    }
+    async deleteById(cartId:string){
+
+        try {
+            await this.collection.deleteOne({_id: cartId})       
+            return true
+        } catch (error) {
+            console.log(error);
+            
+            return false
+        }
+    }
+
+    async getAll() {
+        return await this.collection.find()
+      } 
+      
+    async getById(id:string) {
+        return await this.collection.findById(id)
+      } 
+
+    async editById(id:string,producto:string) {
+
+     let result = await this.collection.replaceOne({_id: id},producto)
+     console.log(result);
+      
+     return await this.collection.findById(id)
+    } 
 }
 
 
