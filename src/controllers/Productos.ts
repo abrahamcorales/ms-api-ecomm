@@ -1,6 +1,6 @@
 import {ProductsDao} from '../dao/index';
 import { Products } from '../interfaces/Inventory';
-import { Auth } from '../middleware/Auth'
+
 
 const db = new ProductsDao
 
