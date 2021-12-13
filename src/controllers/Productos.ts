@@ -1,4 +1,4 @@
-import {ProductsDao} from '../dao/index';
+import {ProductsDao} from '../dao/index.js';
 import { Products } from '../interfaces/Inventory';
 
 

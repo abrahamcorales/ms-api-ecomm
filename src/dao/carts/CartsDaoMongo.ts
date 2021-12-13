@@ -1,4 +1,4 @@
-import ContainerMongo from '../../containers/ContainerMongo';
+import ContainerMongo from '../../containers/ContainerMongo.js';
 
 class  CartsDaoMongo extends ContainerMongo {
 

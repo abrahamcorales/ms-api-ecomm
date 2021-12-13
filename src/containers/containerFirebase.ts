@@ -1,17 +1,12 @@
 import admin, { database } from 'firebase-admin'
-import config from '../config'
+import config from '../config.js'
 
 admin.initializeApp({
     credential: admin.credential.cert(config.firebase.credetentialFile),
     databaseURL: config.firebase.databaseURL
 })
 
-console.log('firebase conectado');
-
 const db = admin.firestore()
-const query = db.collection('test')
-
-
 class ContainerFirebase {
 
     public collection:any

@@ -1,5 +1,5 @@
-import * as express from 'express';
-import * as cartController  from '../controllers/Carts'
+import express from 'express';
+import * as cartController  from '../controllers/Carts.js'
 const routes = express.Router()
 
 routes.post('/',cartController.save)

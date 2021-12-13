@@ -1,4 +1,4 @@
-import {CartsDao} from '../dao/index';
+import {CartsDao} from '../dao/index.js';
 
 const db = new CartsDao
 export const save = async (req:any,res:any) => {

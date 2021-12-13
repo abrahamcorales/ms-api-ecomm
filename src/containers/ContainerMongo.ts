@@ -1,6 +1,6 @@
 //import CartModel from './models/mongo/Cartschema'
 import mongoose from 'mongoose'
-import config from '../config'
+import config from '../config.js'
 import * as dotenv from 'dotenv';
 dotenv.config()
 

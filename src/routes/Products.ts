@@ -1,6 +1,6 @@
-import * as express from 'express';
-import * as prController  from '../controllers/Productos'
-import { Auth } from '../middleware/Auth'
+import express from 'express';
+import * as prController  from '../controllers/Productos.js'
+import { Auth } from '../middleware/Auth.js'
 const routes = express.Router()
 
 routes.post('/',Auth,prController.save)

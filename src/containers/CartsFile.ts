@@ -1,7 +1,9 @@
-import ProductsClass from './ProductsFile';
+import ProductsClass from './ProductsFile.js';
 import { Carts, Products } from '../interfaces/Inventory';
-
+import { fileURLToPath } from 'url';
 import path from 'path';
+const __filename = fileURLToPath(import.meta.url); //! for use __dirname in ECMAScript modules
+const __dirname = path.dirname(__filename); //! for use __dirname in ECMAScript modules
 
 const ProductFile = path.join(__dirname,'..', '..', 'data', 'products.txt');
 class CartsClass extends ProductsClass {

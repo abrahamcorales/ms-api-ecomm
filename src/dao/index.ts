@@ -1,28 +1,26 @@
 import * as dotenv from 'dotenv';
-import CartsDaoMongo from  './carts/CartsDaoMongo'
-import CartsDaoFile from './carts/CartsDaoFile';
-import ProductsDaoMongo from './products/ProductsDaoMongo';
-import ProductsDaoFile from './products/ProductsDaoFile';
-import ProductsDaoFirebase from './products/ProductsDaoFirebase';
-import CartsDaoFirebase from './carts/CartsDaoFirebase';
-
 dotenv.config()
     
 let ProductsDao:any
 let CartsDao:any
-    
+
 switch (process.env.DB_PERS) {
-    case 'mongodb':               
-        //const { default: ProductsDaoMongo } = await import('./products/ProductsDaoMongo')
+    case 'mongodb':
+        const { default: CartsDaoMongo } = await import('./carts/CartsDaoMongo.js')               
+        const { default: ProductsDaoMongo } = await import('./products/ProductsDaoMongo.js')
         CartsDao    = CartsDaoMongo
         ProductsDao = ProductsDaoMongo
         break
 
     case 'file':
+        const { default: CartsDaoFile } = await import('./carts/CartsDaoFile.js')               
+        const { default: ProductsDaoFile } = await import('./products/ProductsDaoFile.js')
         CartsDao    = CartsDaoFile
         ProductsDao = ProductsDaoFile
     
     case 'firebase':
+        const { default: CartsDaoFirebase } = await import('./carts/CartsDaoFile.js')               
+        const { default: ProductsDaoFirebase } = await import('./products/ProductsDaoFirebase.js')
         CartsDao    = CartsDaoFirebase
         ProductsDao = ProductsDaoFirebase
     
